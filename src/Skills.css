@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 5rem;
+  margin: 20px;
+}
+
+/* Skill Tab Styles */
+.skill-tab {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.skill-tab:hover {
+  transform: scale(1.05);
+}
+
+.skill-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .skills-container {
+    gap: 1rem 1.5rem; /* Reduce gap for mobile screens */
+  }
+
+  .skill-tab {
+    width: calc(25% - 20px); /* Three cards per row */
+    padding: 5px; /* Reduce padding for mobile screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .skill-tab {
+    width: 120px; /* Adjust width for larger screens */
+  }
+}

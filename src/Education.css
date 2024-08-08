@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.edu-box{
+  margin-top: 5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding for better appearance */
+}
+
+.education-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px; /* Add spacing between the cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  overflow: hidden; /* Ensure content stays within the card */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.education-card:hover {
+  transform: scale(1.05);
+}
+
+.education-card img {
+  width: 100%; /* Ensure the image fits within the card */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; 
+  border-radius: 8px 8px 0 0; /* Adjust border radius to fit the top of the card */
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+h3 {
+  margin: 5px 0;
+  color: #666;
+}
+
+p {
+  margin: 5px 0;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 10px; /* Reduce padding for mobile screens */
+  }
+  
+  .education-card {
+    width: 90%; /* Make the card take most of the screen width */
+    margin: 10px auto; /* Center the card and add some vertical spacing */
+    padding: 15px; /* Reduce padding for mobile screens */
+  }
+  
+  .education-card img {
+    height: auto; /* Ensure the image scales properly */
+    max-height: 200px; /* Set a max height for better appearance */
+  }
+}
+
+@media (min-width: 769px) {
+  .education-card {
+    width: calc(33.333% - 40px); /* Ensure three cards fit per row with margins */
+  }
+}

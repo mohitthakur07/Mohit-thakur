@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed; /* Keep navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays on top of other elements */
+  }
+  
+  .navbar-logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; 
+    margin: 0 1.5rem;   
+    transition: color 0.3s;
+    cursor: pointer; /* Shows pointer on hover */
+  }
+  
+  .navbar-links a:hover {
+    color: #ffd147;
+    transform: scale(1.1);
+  }
+  
+  .navbar-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 1001; /* Ensure toggle button stays above dropdown */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px;
+      flex-direction: row; /* Aligns logo and toggle button horizontally */
+      justify-content: space-between;
+    }
+  
+    .navbar-links {
+      position: fixed;
+      top: 60px; /* Ensure dropdown appears below the navbar */
+      right: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #333;
+      padding: 20px;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      z-index: 999; /* Ensure dropdown stays above other content */
+    }
+  
+    .navbar-links.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    .navbar-toggle {
+      display: block;
+      position: absolute; /* Position the toggle button */
+      top: 15px; /* Adjust according to navbar padding */
+      right: 20px; /* Align with right edge of the navbar */
+    }
+  }
+  
+  /* Add padding to main content to prevent it from hiding under the navbar */
+  .main-content {
+    padding-top: 70px; /* Adjust according to the height of your navbar */
+  }
+  
