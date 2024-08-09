@@ -17,7 +17,9 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <h1>My Portfolio</h1>
+        <h1>
+          <span>M</span>ohit thkaur
+        </h1>
       </div>
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
         <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
