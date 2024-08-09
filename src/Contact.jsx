@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import ContactsIcon from "@mui/icons-material/Contacts";
+import SendIcon from "@mui/icons-material/Send";
+import Button from "@mui/material/Button";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -86,9 +88,9 @@ export default function ContactForm() {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="submit-btn">
-              Send
-            </button>
+            <Button type="submit" variant="contained">
+              Send <SendIcon />
+            </Button>
           </form>
         )}
       </div>
