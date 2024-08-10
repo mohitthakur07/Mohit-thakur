@@ -6,7 +6,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Button from "@mui/material/Button";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import cv from "./assets/resume.pdf";
+import cv from "./assets/mohit-thakur-resume.pdf";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 
