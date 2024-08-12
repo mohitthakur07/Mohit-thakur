@@ -3,6 +3,7 @@ import Education from "./Education";
 import Skills from "./Skills";
 import ContactForm from "./Contact";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 // import "./App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <section id="contact">
         <ContactForm />
       </section>
+      <Footer />
     </>
   );
 }
