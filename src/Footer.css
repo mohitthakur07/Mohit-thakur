@@ -3,14 +3,16 @@
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden; /* Prevent any overflow */
   }
   
   .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 10px; /* Add padding to prevent content from touching the edges */
+    box-sizing: border-box; /* Ensure padding is included in the width */
   }
   
   .footer p {
@@ -36,17 +38,26 @@
   }
   
   /* Responsive Styles */
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     .footer-content {
-      padding: 10px;
+      padding: 10px; /* Reduce padding for smaller screens */
+      width: 100%;
+      box-sizing: border-box;
     }
   
     .footer p {
       font-size: 12px;
     }
   
+    .social-links {
+      display: flex;
+      flex-direction: column; /* Stack links vertically on small screens */
+      align-items: center;
+    }
+  
     .social-links a {
       font-size: 12px;
+      margin: 5px 0; /* Adjust margin for vertical stacking */
     }
-  } */
+  }
   

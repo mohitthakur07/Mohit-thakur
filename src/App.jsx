@@ -23,7 +23,9 @@ function App() {
       <section id="contact">
         <ContactForm />
       </section>
-      <Footer />
+      <section>
+        <Footer />
+      </section>
     </>
   );
 }
