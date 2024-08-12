@@ -18,7 +18,7 @@ export default function NavBar() {
     <nav className="navbar">
       <div className="navbar-logo">
         <h1>
-          <span>M</span>ohit thkaur
+          <span>M</span>ohit thakur
         </h1>
       </div>
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
