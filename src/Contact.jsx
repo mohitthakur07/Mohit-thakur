@@ -39,7 +39,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <div>
+      <div className="contact-form-box">
         <h1>
           Contact <ContactsIcon />
         </h1>

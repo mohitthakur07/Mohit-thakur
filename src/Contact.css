@@ -8,6 +8,10 @@
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
   }
 
+  .contact-form-box{
+    margin: 5rem 0 2rem 0;
+  }
+
   .contact-form-container h3{
     text-align: center;
     margin-bottom: 2rem;
