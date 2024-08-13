@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
 import "./NavBar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,14 +15,13 @@ export default function NavBar() {
     setIsOpen(false);
   };
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle("dark-mode", !isDarkMode);
+  };
+
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <h1>beta version</h1>
-        {/* <h1>
-          <span>M</span>ohit thakur
-        </h1> */}
-      </div>
+    <nav className={`navbar ${isDarkMode ? "dark" : ""}`}>
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
         <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
           Home
@@ -41,6 +41,9 @@ export default function NavBar() {
       </div>
       <div className="navbar-toggle" onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
+      </div>
+      <div className="dark-mode-toggle" onClick={toggleDarkMode}>
+        {isDarkMode ? <FaSun /> : <FaMoon />}
       </div>
     </nav>
   );

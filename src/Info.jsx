@@ -4,6 +4,7 @@ import "./Info.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Button from "@mui/material/Button";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import cv from "./assets/mohit-thakur-resume.pdf";
@@ -60,6 +61,9 @@ export default function Info() {
           <span className="icon">
             <a href="https://github.com/mohitthakur07">
               <GitHubIcon />
+            </a>
+            <a href="https://www.linkedin.com/in/mohit-kumar-thakur-b8b4572b1/">
+              <LinkedInIcon />
             </a>
             <a href="https://www.instagram.com/mohit._.thakur._.07/">
               <InstagramIcon />

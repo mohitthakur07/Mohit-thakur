@@ -1,100 +1,131 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0 0 2px #d0bdbd;
+  position: absolute;
+  top: 3rem;
+  left: 11rem;
+  border-radius: 2rem;
+  z-index: 1000;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.navbar-logo span {
+  color: red;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 1.5rem;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  color: #ffd147;
+  transform: scale(1.1);
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000000;
+}
+
+
+/* Dark mode  Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* Light text color */
+}
+
+.navbar.dark {
+  background-color: #121212; /* Matching dark navbar background */
   
+}
+
+.navbar-links a {
+  color: inherit; /* Inherit the color from the body */
+}
+
+.navbar-links a:hover {
+  color: #ffd147; /* Highlight color on hover */
+}
+
+.dark-mode-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit; /* Inherit the color from the navbar */
+  margin-left: auto;
+  padding: 0 20px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: none;
+    position: unset;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    position: fixed; /* Keep navbar fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure navbar stays on top of other elements */
-  }
-  
-  .navbar-logo h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #fff;
-  }
-  
-  .navbar-logo  span {
-    color: red;
   }
 
   .navbar-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-  }
-  
-  .navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px; 
-    margin: 0 1.5rem;   
-    transition: color 0.3s;
-    cursor: pointer; /* Shows pointer on hover */
-  }
-  
-  .navbar-links a:hover {
-    color: #ffd147;
-    transform: scale(1.1);
-  }
-  
-  .navbar-toggle {
     display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
-    z-index: 1001; /* Ensure toggle button stays above dropdown */
+    position: absolute;
+    top: 60px; /* Adjust top position so it doesn't overlap with the navbar */
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #000000fc;
+    color: #E1D9D1;
+    padding: 20px;
+    gap: 2rem;
+    text-align: center;
+    z-index: 999;
+    font-weight: bold;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 10px;
-      flex-direction: row; /* Aligns logo and toggle button horizontally */
-      justify-content: space-between;
-    }
-  
-    .navbar-links {
-      position: fixed;
-      top: 60px; /* Ensure dropdown appears below the navbar */
-      right: 0;
-      width: 100%;
-      flex-direction: column;
-      background-color: #333;
-      padding: 20px;
-      transform: translateY(-100%);
-      opacity: 0;
-      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      z-index: 999; /* Ensure dropdown stays above other content */
-    }
-  
-    .navbar-links.active {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  
-    .navbar-toggle {
-      display: block;
-      position: absolute; /* Position the toggle button */
-      top: 15px; /* Adjust according to navbar padding */
-      right: 20px; /* Align with right edge of the navbar */
-    }
+
+  .navbar-links.active {
+    display: flex; /* Show the navbar links when active */
   }
-  
-  /* Add padding to main content to prevent it from hiding under the navbar */
-  .main-content {
-    padding-top: 70px; /* Adjust according to the height of your navbar */
+
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 20px; /* Keep toggle button on the right side */
+    color: inherit;
   }
+
   
+}
+
+/* Add padding to main content to prevent it from hiding under the navbar */
+.main-content {
+  padding-top: 70px;
+}
+
