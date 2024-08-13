@@ -41,11 +41,32 @@ body {
   margin: 0 1.5rem;
   transition: color 0.3s;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
+  /* color: #0087ca; */
 }
 
 .navbar-links a:hover {
-  color: #ffd147;
+  /* color: #ffd147; */
   transform: scale(1.1);
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f2d30adc;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .navbar-toggle {
@@ -71,9 +92,8 @@ body.dark-mode {
   color: inherit; /* Inherit the color from the body */
 }
 
-.navbar-links a:hover {
-  color: #ffd147; /* Highlight color on hover */
-}
+
+
 
 .dark-mode-toggle {
   font-size: 24px;
