@@ -60,6 +60,16 @@ p {
   color: #333;
 }
 
+/* Dark mode */
+
+.dark-mode .education-card {
+  background-color: #1a1a1a; /* Dark mode background */
+}
+
+.dark-mode h2, h3, p {
+  color: #fff;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .education-container {

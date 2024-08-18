@@ -16,7 +16,7 @@ import StreamIcon from "@mui/icons-material/Stream";
 export default function Skills() {
   return (
     <>
-      <div>
+      <div className="skillBox">
         <h1>
           Skills <StreamIcon />
         </h1>

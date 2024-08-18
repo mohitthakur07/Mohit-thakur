@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import ContactForm from "./Contact";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Project from "./Project";
 // import "./App.css";
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
       </section>
       <section id="education">
         <Education />
+      </section>
+      <section id="projects">
+        <Project />
       </section>
       <section id="contact">
         <ContactForm />

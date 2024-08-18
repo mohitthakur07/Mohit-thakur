@@ -20,6 +20,12 @@ h1 {
   margin: 20px;
 }
 
+.skillBox{
+  padding: 50px 0;
+  background-color: #f9f9f9; /* Default light mode background */
+  color: #000;
+}
+
 /* Skill Tab Styles */
 .skill-tab {
   background-color: #f9f9f9;
@@ -47,6 +53,21 @@ p {
   margin: 0;
   color: #333;
   font-size: 14px;
+}
+
+
+/* Dark Mode */
+ .dark-mode .skillBox {
+  background-color: #1a1a1a; /* Dark mode background */
+}
+
+.dark-mode .skill-tab{
+  background-color: #121212;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode p {
+  color: #fff;
 }
 
 /* Responsive Styles */
