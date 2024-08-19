@@ -5,6 +5,10 @@
     background-color: #f9f9f9; /* Default light mode background */
     color: #000; /* Default light mode text color */
   }
+
+  .projects-section h2{
+    margin-bottom: 3rem;
+  }
   
   .projects-container {
     display: flex;
