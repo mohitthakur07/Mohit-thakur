@@ -1,4 +1,4 @@
-import React from "react";
+import "./Education.css"; // Import the CSS file
 import PropTypes from "prop-types";
 
 const EducationCard = ({ src, clgName, stream, session, cgpa, link }) => {

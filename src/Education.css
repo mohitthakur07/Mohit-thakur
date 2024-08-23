@@ -45,17 +45,17 @@ h1 {
   border-radius: 8px 8px 0 0; /* Adjust border radius to fit the top of the card */
 }
 
-h2 {
+.education-card h2 {
   margin: 10px 0;
   color: #333;
 }
 
-h3 {
+.education-card h3 {
   margin: 5px 0;
   color: #666;
 }
 
-p {
+.education-card p {
   margin: 5px 0;
   color: #333;
 }
@@ -66,8 +66,8 @@ p {
   background-color: #1a1a1a; /* Dark mode background */
 }
 
-.dark-mode h2, h3, p {
-  color: #fff;
+.dark-mode  h2, h3, p {
+  color: inherit;
 }
 
 /* Responsive Styles */
